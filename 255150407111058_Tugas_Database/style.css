@@ -1,0 +1,162 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* THEME VARIABLES */
+:root {
+    --bg: #f1f5f9;
+    --card: rgba(255,255,255,0.8);
+    --text: #111;
+    --accent: #6366f1;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: rgba(30,41,59,0.7);
+    --text: #f1f5f9;
+    --accent: #818cf8;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.4s;
+    min-height: 100vh;
+}
+
+/* CONTAINER (Glassmorphism) */
+.container {
+    width: 360px;
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 16px;
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    animation: fadeUp 0.6s ease;
+}
+
+/* TITLE */
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0,0,0,0.05);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+body.dark input,
+body.dark textarea {
+    background: rgba(255,255,255,0.05);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* LINK */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* USER LIST */
+.user-item {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.user-item:hover {
+    transform: translateX(5px);
+}
+
+/* ALERT */
+.alert {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-error {
+    background: #ef4444;
+    color: white;
+}
+
+.alert-success {
+    background: #22c55e;
+    color: white;
+}
+
+/* TOGGLE BUTTON */
+.toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    body {
+    border: 5px solid red;
+}
+}
